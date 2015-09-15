@@ -1,6 +1,12 @@
-This directory contains cmake files that can be used to generate MSVC project
-files in order to build protobuf on windows. You need to have cmake installed
-on your computer before proceeding.
+This directory contains *CMake* files that can be used to build protobuf
+with *MSVC* on *Windows*. You can build the project as a from *Command Prompt*
+and using an *Visual Studio* IDE.
+
+You need to have [CMake](http://www.cmake.org), [Visual Studio](https://www.visualstudio.com)
+and optionaly [Git](http://git-scm.com) installed on your computer before proceeding.
+
+Most of the instruction will be given to the *Сommand Prompt*, but the same
+actions can be performed using appropriate GUI tools.
 
 Compiling and Installing
 ========================
