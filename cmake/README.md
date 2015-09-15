@@ -8,6 +8,42 @@ and optionaly [Git](http://git-scm.com) installed on your computer before procee
 Most of the instruction will be given to the *Сommand Prompt*, but the same
 actions can be performed using appropriate GUI tools.
 
+Setting Environment
+===================
+
+From *Start* menu button open appropriate *Command Prompt*.
+
+For example: *Start* > *Visual Studio 2013* > *Visual Studio Tools* >
+*VS2013 x64 Native Tools Command Prompt*. You should see the *Command Prompt*:
+
+    C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64>
+
+Change current drive letter, if needed:
+
+    C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64>X:
+    X:\>
+
+Where *X* is your working drive letter. And change directory to your working folder:
+
+    X:\>cd Path\to
+    X:\Path\to>
+
+Where *Path\to* is path to your real working folder.
+
+Make folder where builded protobuf will be installed:
+
+    X:\Path\to>mkdir install
+
+If *cmake* coomand is not avaliable from *Command Promt*, add it in system *PATH* variable:
+
+    X:\Path\to>set PATH=%PATH%;C:\Program Files (x86)\CMake\bin
+
+If *git* coomand is not avaliable from *Command Promt*, add it in system *PATH* variable:
+
+    X:\Path\to>set PATH=%PATH%;C:\Program Files\Git\cmd
+
+Good. Now you are ready to continue.
+
 Compiling and Installing
 ========================
 
