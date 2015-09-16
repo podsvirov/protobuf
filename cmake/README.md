@@ -138,6 +138,9 @@ To make *Visual Studio* solution file from *build* folder type:
 
 It will generate *Visual Studion* solution file *protobuf.sln* in current directory.
 
+If the *gmock* directory does not existence, and you do not want to build protobuf unit tests,
+you need to add *cmake* command argument `-Dprotobuf_BUILD_TESTS=OFF` to disable testing.
+
 Compiling and Installing
 ========================
 
