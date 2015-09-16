@@ -141,6 +141,27 @@ It will generate *Visual Studion* solution file *protobuf.sln* in current direct
 If the *gmock* directory does not existence, and you do not want to build protobuf unit tests,
 you need to add *cmake* command argument `-Dprotobuf_BUILD_TESTS=OFF` to disable testing.
 
+Compiling
+=========
+
+To compilling protobuf type:
+
+     X:\Path\to\protobuf\cmake\build\release>nmake
+
+or
+
+     X:\Path\to\protobuf\cmake\build\debug>nmake
+
+And wait for compiling to finish.
+
+You prefer to use the IDE:
+
+  * Open the generated protobuf.sln file in Microsoft Visual Studio.
+  * Choose "Debug" or "Release" configuration as desired.
+  * From the Build menu, choose "Build Solution".
+
+And wait for compiling to finish.
+
 Compiling and Installing
 ========================
 
