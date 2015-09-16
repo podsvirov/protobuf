@@ -162,6 +162,69 @@ You prefer to use the IDE:
 
 And wait for compiling to finish.
 
+Testing
+=======
+
+To start unit testing type:
+
+     X:\Path\to\protobuf\cmake\build\release>nmake test
+
+or
+
+     X:\Path\to\protobuf\cmake\build\debug>nmake  test
+
+You can also build project *RUN_TESTS* from Visual Studio solution.
+Yes, it may sound strange, but it works.
+
+You should see output similar to:
+
+     Test project X:/Path/to/protobuf/cmake/build/release
+          Start  1: lite-test
+     1/62 Test  #1: lite-test ...............................   Passed    0.00 sec
+          Start  2: any_test
+     2/62 Test  #2: any_test
+         ...
+     
+     100% tests passed, 0 tests failed out of 62
+     
+     Total Test time (real) =  2.45 sec
+
+If you are full of the test fails, then you can do it alone with
+[ctest](http://www.cmake.org/cmake/help/latest/manual/ctest.1.html) command:
+
+     X:\Path\to\protobuf\cmake\build\release>ctest -R any_test
+     Test project X:/Path/to/protobuf/cmake/release
+     ld/release
+         Start 2: any_test
+     1/1 Test #2: any_test .........................   Passed    0.02 sec
+     
+     100% tests passed, 0 tests failed out of 1
+     
+     Total Test time (real) =   0.05 sec
+
+Fore more detail output start all *tests* or individual as *any_test* from source folder:
+
+     X:\Path\to\protobuf>cmake\build\release\any_test.exe
+     Running main() from gmock_main.cc
+     [==========] Running 3 tests from 1 test case.
+     [----------] Global test environment set-up.
+     [----------] 3 tests from AnyTest
+     [ RUN      ] AnyTest.TestPackAndUnpack
+     [       OK ] AnyTest.TestPackAndUnpack (0 ms)
+     [ RUN      ] AnyTest.TestPackAndUnpackAny
+     [       OK ] AnyTest.TestPackAndUnpackAny (0 ms)
+     [ RUN      ] AnyTest.TestIs
+     [       OK ] AnyTest.TestIs (0 ms)
+     [----------] 3 tests from AnyTest (0 ms total)
+     
+     [----------] Global test environment tear-down
+     [==========] 3 tests from 1 test case ran. (0 ms total)
+     [  PASSED  ] 3 tests.
+
+Note that the start from source folder important for many tests.
+
+If all tests are passed, safely continue.
+
 Compiling and Installing
 ========================
 
