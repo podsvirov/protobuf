@@ -44,6 +44,49 @@ If *git* coomand is not avaliable from *Command Promt*, add it in system *PATH* 
 
 Good. Now you are ready to continue.
 
+Getting Sources
+===============
+
+You can get the latest stable source packages from the
+[releases](https://github.com/google/protobuf/releases) page.
+Or you can type:
+
+     X:\Path\to> git clone -b release_tag https://github.com/google/protobuf.git
+
+Where *release_tag* is a real repository tag or branch name as a *master*
+if you want to get the latest code.
+
+Go to the project folder:
+
+     X:\Path\to>cd protobuf
+     X:\Path\to\protobuf>
+
+Check whether a *gmock* directory exists in the upper level directory. If you
+checkout the code from GitHub via `git clone`, this *gmock* directory won't
+exist and you won't be able to build protobuf unit-tests.
+
+These source packages from *releases* page contains more stable versions of protobuf
+and already have the *gmock* directory included.
+
+If even so the *gmock* folder does not exist, you can download it as follows:
+
+     X:\Path\to\protobuf>git clone -b release-1.7.0 https://github.com/google/googlemock.git gmock
+
+Then go to *gmock* folder and downdload gtest:
+
+     X:\Path\to\protobuf>cd gmock
+     X:\Path\to\protobuf\gmock>git clone -b release-1.7.0 https://github.com/google/googletest.git gtest
+
+If you absolutely don't want to build and run protobuf unit-tests, skip
+this steps and use protobuf at your own risk.
+
+Now go to *cmake* folder in protobuf sources:
+
+     X:\Path\to\protobuf\gmock>cd ..\cmake
+     X:\Path\to\protobuf\cmake>
+
+Good. Now you are ready to *CMake* configuration.
+
 Compiling and Installing
 ========================
 
