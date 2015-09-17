@@ -239,60 +239,6 @@ compiling a debug build of your application, you may need to link against a
 debug build of libprotobufd.lib with "d" postfix.  Similarly, release builds should link against
 release libprotobuf.lib library.
 
-Compiling and Installing
-========================
-
-1. Check whether a gmock directory exists in the upper level directory. If you
-   checkout the code from github via "git clone", this gmock directory won't
-   exist and you won't be able to build protobuf unit-tests. Consider using one
-   of the release tar balls instead:
-
-        https://github.com/google/protobuf/releases
-
-   These release tar balls are more stable versions of protobuf and already
-   have the gmock directory included.
-
-   You can also download gmock by yourself and put it in the right place.
-
-   If you absolutely don't want to build and run protobuf unit-tests, skip
-   this step and use protobuf at your own risk.
-
-2. Use cmake to generate MSVC project files. Running the following commands
-   in a command shell will generate project files for Visual Studio 2008 in
-   a sub-directory named "build".
-
-        $ cd path/to/protobuf/cmake
-        $ mkdir build
-        $ cd build
-        $ cmake -G "Visual Studio 9 2008" ..
-
-   If you don't have gmock, skip the build of tests by turning off the
-   BUILD_TESTING option:
-
-        $ cmake -G "Visual Studio 9 2008" -DBUILD_TESTING=OFF ..
-
-3. Open the generated protobuf.sln file in Microsoft Visual Studio.
-4. Choose "Debug" or "Release" configuration as desired.
-5. From the Build menu, choose "Build Solution".  Wait for compiling to finish.
-6. If you have built tests, run tests.exe and lite-test.exe from a command
-   shell and check that all tests pass. Make sure you have changed the working
-   directory to the output directory because tests.exe will try to find and run
-   test_plugin.exe in the working directory.
-7. Run extract_includes.bat to copy all the public headers into a separate
-   "include" directory. This batch script can be found along with the generated
-   protobuf.sln file in the same directory.
-8. Copy the contents of the include directory to wherever you want to put
-   headers.
-9. Copy protoc.exe wherever you put build tools (probably somewhere in your
-   PATH).
-10. Copy libprotobuf.lib, libprotobuf-lite.lib, and libprotoc.lib wherever you
-    put libraries.
-
-  To avoid conflicts between the MSVC debug and release runtime libraries, when
-  compiling a debug build of your application, you may need to link against a
-  debug build of libprotobuf.lib.  Similarly, release builds should link against
-  release libs.
-
 DLLs vs. static linking
 =======================
 
