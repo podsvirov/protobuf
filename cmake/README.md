@@ -270,21 +270,43 @@ ZLib support
 
 If you want to include GzipInputStream and GzipOutputStream
 (google/protobuf/io/gzip_stream.h) in libprotobuf, you will need to do a few
-additional steps:
+additional steps.
 
-1. Obtain a copy of the zlib library.  The pre-compiled DLL at zlib.net works.
-2. Make sure zlib's two headers are in your include path and that the .lib file
-   is in your library path.  You could place all three files directly into this
-   cmake directory to compile libprotobuf, but they need to be visible to
-   your own project as well, so you should probably just put them into the
-   VC shared icnlude and library directories.
-3. Add flag "-DZLIB=ON" when invoking cmake:
+Obtain a copy of the zlib library.  The pre-compiled DLL at zlib.net works.
+You need prepare it:
 
-        $ cmake -G "Visual Studio 9 2008" -DZLIB=ON ..
+  * Make sure zlib's two headers are in your `X:\Path\to\install\include` path
+  * Make sure zlib's linking libraries (*.lib file) is in your
+    `X:\Path\to\install\lib` library path.
 
-   If it reports NOTFOUND for zlib_include or zlib_lib, you might haven't put
-   the headers or the .lib file in the right directory.
-4) Open the generated protobuf.sln file and build as usual.
+You can also quick compile it himself.
+
+Getting sources:
+
+     X:\Path\to>git clone -b v1.2.8 https://github.com/madler/zlib.git
+     X:\Path\to>cd zlib
+
+Compiling and Installing:
+
+     X:\Path\to\zlib>mkdir build & cd build
+     X:\Path\to\zlib\build>mkdir release & cd release
+     X:\Path\to\zlib\build\release>cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ^
+     -DCMAKE_INSTALL_PREFIX=../../../install ../..
+     X:\Path\to\zlib\build\release>nmake & nmake install
+
+You can make *debug* version or use *Visual Studio* generator also as before for the
+protobuf project.
+
+Now add *bin* folder from *install* to system *PATH*:
+
+     X:\Path\to>set PATH=%PATH%;X:\Path\to\install\bin
+
+You need reconfigure protobuf with flag `-Dprotobuf_WITH_ZLIB=ON` when invoking cmake.
+
+If it reports NOTFOUND for zlib_include or zlib_lib, you might haven't put
+the headers or the .lib file in the right directory.
+
+Build and testing protobuf as usual.
 
 Notes on Compiler Warnings
 ==========================
@@ -316,4 +338,3 @@ unique, so there should be no problem with this, but MSVC prints warning
 nevertheless.  So, we disable it.  Unfortunately, this warning will also be
 produced when compiling code which merely uses protocol buffers, meaning you
 may have to disable it in your code too.
-
