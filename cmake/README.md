@@ -210,6 +210,35 @@ Note that the start from source folder important for testing.
 
 If all tests are passed, safely continue.
 
+Installing
+==========
+
+To install protobuf to the specified *install* folder type:
+
+     X:\Path\to\protobuf\cmake\build\release>nmake install
+
+or
+
+     X:\Path\to\protobuf\cmake\build\debug>nmake  install
+
+You can also build project *INSTALL* from Visual Studio solution.
+It sounds not so strange and it works.
+
+This will create the following folders:
+  * bin - that contain protobuf *protoc.exe* compiler;
+  * inclue - that contain C++ headers and protobuf *.proto files;
+  * lib - that contain linking libraries and *CMake* configuration for *protobuf* package.
+
+Now you can if needed:
+  * Copy the contents of the include directory to wherever you want to put headers.
+  * Copy protoc.exe wherever you put build tools (probably somewhere in your PATH).
+  * Copy linking libraries libprotobuf[d].lib, libprotobuf-lite[d].lib, and libprotoc[d].lib wherever you put libraries.
+
+To avoid conflicts between the MSVC debug and release runtime libraries, when
+compiling a debug build of your application, you may need to link against a
+debug build of libprotobufd.lib with "d" postfix.  Similarly, release builds should link against
+release libprotobuf.lib library.
+
 Compiling and Installing
 ========================
 
