@@ -249,12 +249,9 @@ recommended that you use static linkage only.  However, it is possible to
 build libprotobuf and libprotoc as DLLs if you really want.  To do this,
 do the following:
 
-  1. Add an additional flag "-DBUILD_SHARED_LIBS=ON" when invoking cmake:
-
-        $ cmake -G "Visual Studio 9 2008" -DBUILD_SHARED_LIBS=ON ..
-
-  2. Follow the same steps as described in the above section.
-  3. When compiling your project, make sure to #define PROTOBUF_USE_DLLS.
+  * Add an additional flag `-Dprotobuf_BUILD_SHARED_LIBS=ON` when invoking cmake
+  * Follow the same steps as described in the above section.
+  * When compiling your project, make sure to `#define PROTOBUF_USE_DLLS`.
 
 When distributing your software to end users, we strongly recommend that you
 do NOT install libprotobuf.dll or libprotoc.dll to any shared location.
