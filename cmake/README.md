@@ -8,8 +8,8 @@ and optionally [Git](http://git-scm.com) installed on your computer before proce
 Most of the instructions will be given to the *Сommand Prompt*, but the same
 actions can be performed using appropriate GUI tools.
 
-Setting Environment
-===================
+Environment Setup
+=================
 
 From *Start* menu button open appropriate *Command Prompt*.
 
