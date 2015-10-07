@@ -17,17 +17,12 @@ For example *VS2013 x64 Native Tools Command Prompt*:
 
     C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64>
 
-Change current drive letter, if needed:
+Change to your working directory:
 
-    C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64>X:
-    X:\>
+    C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64>cd C:\Path\to
+    C:\Path\to>
 
-Where *X* is your working drive letter. And change directory to your working folder:
-
-    X:\>cd Path\to
-    X:\Path\to>
-
-Where *Path\to* is path to your real working folder.
+Where *C:\Path\to* is path to your real working directory.
 
 Make folder where builded protobuf will be installed:
 
