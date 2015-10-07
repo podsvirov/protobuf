@@ -45,15 +45,15 @@ You can get the latest stable source packages from the
 [releases](https://github.com/google/protobuf/releases) page.
 Or you can type:
 
-     X:\Path\to> git clone -b release_tag https://github.com/google/protobuf.git
+     C:\Path\to> git clone -b [release_tag] https://github.com/google/protobuf.git
 
-Where *release_tag* is a real repository tag or branch name as a *master*
+Where *[release_tag]* is a git tag like *v3.0.0-beta-1* or a branch name like *master*
 if you want to get the latest code.
 
 Go to the project folder:
 
-     X:\Path\to>cd protobuf
-     X:\Path\to\protobuf>
+     C:\Path\to>cd protobuf
+     C:\Path\to\protobuf>
 
 Check whether a *gmock* directory exists in the upper level directory. If you
 checkout the code from GitHub via `git clone`, this *gmock* directory won't
