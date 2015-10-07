@@ -82,29 +82,29 @@ Good. Now you are ready to *CMake* configuration.
 CMake Configuration
 ===================
 
-The *CMake* provides a lot of different
+The *CMake* supports a lot of different
 [generators](http://www.cmake.org/cmake/help/latest/manual/cmake-generators.7.html)
-for various native build system.
-We are interested a
+for various native build systems.
+We are only interested in
 [Makefile](http://www.cmake.org/cmake/help/latest/manual/cmake-generators.7.html#makefile-generators)
-and a
+and
 [Visual Studio](http://www.cmake.org/cmake/help/latest/manual/cmake-generators.7.html#visual-studio-generators)
 generators.
 
 We will use shadow building to separate the temporary files from the protobuf source code.
 
-Make temporary *build* folder and change directory to:
+Create a temporary *build* folder and change your working directory to it:
 
-     X:\Path\to\protobuf\cmake>mkdir build & cd build
-     X:\Path\to\protobuf\cmake\build>
+     C:\Path\to\protobuf\cmake>mkdir build & cd build
+     C:\Path\to\protobuf\cmake\build>
 
 The *Makefile* generator can build the project in only one configuration, so you need to build
 a separate folder for each configuration.
 
 To start using a *Release* configuration:
 
-     X:\Path\to\protobuf\cmake\build>mkdir release & cd release
-     X:\Path\to\protobuf\cmake\build\release>cmake -G "NMake Makefiles" ^
+     C:\Path\to\protobuf\cmake\build>mkdir release & cd release
+     C:\Path\to\protobuf\cmake\build\release>cmake -G "NMake Makefiles" ^
      -DCMAKE_BUILD_TYPE=Release ^
      -DCMAKE_INSTALL_PREFIX=../../../../install ^
      ../..
@@ -113,8 +113,8 @@ It will generate *nmake* *Makefile* in current directory.
 
 To using a *Debug* configuration from *build* folder type:
 
-     X:\Path\to\protobuf\cmake\build>mkdir debug & cd debug
-     X:\Path\to\protobuf\cmake\build\debug>cmake -G "NMake Makefiles" ^
+     C:\Path\to\protobuf\cmake\build>mkdir debug & cd debug
+     C:\Path\to\protobuf\cmake\build\debug>cmake -G "NMake Makefiles" ^
      -DCMAKE_BUILD_TYPE=Debug ^
      -DCMAKE_INSTALL_PREFIX=../../../../install ^
      ../..
@@ -123,14 +123,14 @@ It will generate *nmake* *Makefile* in current directory.
 
 To make *Visual Studio* solution file from *build* folder type:
 
-     X:\Path\to\protobuf\cmake>mkdir solution & cd solution
-     X:\Path\to\protobuf\cmake\solution>cmake -G "Visual Studio 12 2013 Win64" ^
+     C:\Path\to\protobuf\cmake>mkdir solution & cd solution
+     C:\Path\to\protobuf\cmake\solution>cmake -G "Visual Studio 12 2013 Win64" ^
      -DCMAKE_INSTALL_PREFIX=../../../../install ^
      ../..
 
 It will generate *Visual Studion* solution file *protobuf.sln* in current directory.
 
-If the *gmock* directory does not existence, and you do not want to build protobuf unit tests,
+If the *gmock* directory does not exist, and you do not want to build protobuf unit tests,
 you need to add *cmake* command argument `-Dprotobuf_BUILD_TESTS=OFF` to disable testing.
 
 Compiling
