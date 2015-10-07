@@ -1,5 +1,5 @@
 This directory contains *CMake* files that can be used to build protobuf
-with *MSVC* on *Windows*. You can build the project as a from *Command Prompt*
+with *MSVC* on *Windows*. You can build the project from *Command Prompt*
 and using an *Visual Studio* IDE.
 
 You need to have [CMake](http://www.cmake.org), [Visual Studio](https://www.visualstudio.com)
