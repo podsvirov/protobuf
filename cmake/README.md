@@ -11,10 +11,9 @@ actions can be performed using appropriate GUI tools.
 Environment Setup
 =================
 
-From *Start* menu button open appropriate *Command Prompt*.
+Open the appropriate *Command Prompt* from the *Start* menu.
 
-For example: *Start* > *Visual Studio 2013* > *Visual Studio Tools* >
-*VS2013 x64 Native Tools Command Prompt*. You should see the *Command Prompt*:
+For example *VS2013 x64 Native Tools Command Prompt*:
 
     C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64>
 
