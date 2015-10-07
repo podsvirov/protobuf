@@ -28,13 +28,13 @@ Create a folder where protobuf headers/libraries/binaries will be installed afte
 
     C:\Path\to>mkdir install
 
-If *cmake* coomand is not avaliable from *Command Promt*, add it in system *PATH* variable:
+If *cmake* coomand is not avaliable from *Command Promt*, add it to system *PATH* variable:
 
-    X:\Path\to>set PATH=%PATH%;C:\Program Files (x86)\CMake\bin
+    C:\Path\to>set PATH=%PATH%;C:\Program Files (x86)\CMake\bin
 
-If *git* coomand is not avaliable from *Command Promt*, add it in system *PATH* variable:
+If *git* coomand is not avaliable from *Command Promt*, add it to system *PATH* variable:
 
-    X:\Path\to>set PATH=%PATH%;C:\Program Files\Git\cmd
+    C:\Path\to>set PATH=%PATH%;C:\Program Files\Git\cmd
 
 Good. Now you are ready to continue.
 
