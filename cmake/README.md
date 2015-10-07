@@ -291,7 +291,7 @@ protobuf project.
 
 Now add *bin* folder from *install* to system *PATH*:
 
-     C:\Path\to>set PATH=%PATH%;X:\Path\to\install\bin
+     C:\Path\to>set PATH=%PATH%;C:\Path\to\install\bin
 
 You need reconfigure protobuf with flag `-Dprotobuf_WITH_ZLIB=ON` when invoking cmake.
 
