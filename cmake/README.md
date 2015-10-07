@@ -24,9 +24,9 @@ Change to your working directory:
 
 Where *C:\Path\to* is path to your real working directory.
 
-Make folder where builded protobuf will be installed:
+Create a folder where protobuf headers/libraries/binaries will be installed after built:
 
-    X:\Path\to>mkdir install
+    C:\Path\to>mkdir install
 
 If *cmake* coomand is not avaliable from *Command Promt*, add it in system *PATH* variable:
 
