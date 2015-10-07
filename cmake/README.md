@@ -138,11 +138,11 @@ Compiling
 
 To compilling protobuf type:
 
-     X:\Path\to\protobuf\cmake\build\release>nmake
+     C:\Path\to\protobuf\cmake\build\release>nmake
 
 or
 
-     X:\Path\to\protobuf\cmake\build\debug>nmake
+     C:\Path\to\protobuf\cmake\build\debug>nmake
 
 And wait for compiling to finish.
 
@@ -159,11 +159,11 @@ Testing
 
 To start unit testing type:
 
-     X:\Path\to\protobuf\cmake\build\release>nmake check
+     C:\Path\to\protobuf\cmake\build\release>nmake check
 
 or
 
-     X:\Path\to\protobuf\cmake\build\debug>nmake  check
+     C:\Path\to\protobuf\cmake\build\debug>nmake  check
 
 You can also build project *check* from Visual Studio solution.
 Yes, it may sound strange, but it works.
@@ -180,7 +180,7 @@ You should see output similar to:
 
 Fore more specific testing start *tests* from source folder:
 
-     X:\Path\to\protobuf>cmake\build\release\tests.exe --gtest_filter=AnyTest*
+     C:\Path\to\protobuf>cmake\build\release\tests.exe --gtest_filter=AnyTest*
      Running main() from gmock_main.cc
      Note: Google Test filter = AnyTest*
      [==========] Running 3 tests from 1 test case.
@@ -207,11 +207,11 @@ Installing
 
 To install protobuf to the specified *install* folder type:
 
-     X:\Path\to\protobuf\cmake\build\release>nmake install
+     C:\Path\to\protobuf\cmake\build\release>nmake install
 
 or
 
-     X:\Path\to\protobuf\cmake\build\debug>nmake  install
+     C:\Path\to\protobuf\cmake\build\debug>nmake  install
 
 You can also build project *INSTALL* from Visual Studio solution.
 It sounds not so strange and it works.
@@ -267,31 +267,31 @@ additional steps.
 Obtain a copy of the zlib library.  The pre-compiled DLL at zlib.net works.
 You need prepare it:
 
-  * Make sure zlib's two headers are in your `X:\Path\to\install\include` path
+  * Make sure zlib's two headers are in your `C:\Path\to\install\include` path
   * Make sure zlib's linking libraries (*.lib file) is in your
-    `X:\Path\to\install\lib` library path.
+    `C:\Path\to\install\lib` library path.
 
 You can also quick compile it himself.
 
 Getting sources:
 
-     X:\Path\to>git clone -b v1.2.8 https://github.com/madler/zlib.git
-     X:\Path\to>cd zlib
+     C:\Path\to>git clone -b v1.2.8 https://github.com/madler/zlib.git
+     C:\Path\to>cd zlib
 
 Compiling and Installing:
 
-     X:\Path\to\zlib>mkdir build & cd build
-     X:\Path\to\zlib\build>mkdir release & cd release
-     X:\Path\to\zlib\build\release>cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ^
+     C:\Path\to\zlib>mkdir build & cd build
+     C:\Path\to\zlib\build>mkdir release & cd release
+     C:\Path\to\zlib\build\release>cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ^
      -DCMAKE_INSTALL_PREFIX=../../../install ../..
-     X:\Path\to\zlib\build\release>nmake & nmake install
+     C:\Path\to\zlib\build\release>nmake & nmake install
 
 You can make *debug* version or use *Visual Studio* generator also as before for the
 protobuf project.
 
 Now add *bin* folder from *install* to system *PATH*:
 
-     X:\Path\to>set PATH=%PATH%;X:\Path\to\install\bin
+     C:\Path\to>set PATH=%PATH%;X:\Path\to\install\bin
 
 You need reconfigure protobuf with flag `-Dprotobuf_WITH_ZLIB=ON` when invoking cmake.
 
