@@ -111,7 +111,7 @@ To start using a *Release* configuration:
 
 It will generate *nmake* *Makefile* in current directory.
 
-To using a *Debug* configuration from *build* folder type:
+To use *Debug* configuration:
 
      C:\Path\to\protobuf\cmake\build>mkdir debug & cd debug
      C:\Path\to\protobuf\cmake\build\debug>cmake -G "NMake Makefiles" ^
@@ -121,7 +121,7 @@ To using a *Debug* configuration from *build* folder type:
 
 It will generate *nmake* *Makefile* in current directory.
 
-To make *Visual Studio* solution file from *build* folder type:
+To create *Visual Studio* solution file:
 
      C:\Path\to\protobuf\cmake>mkdir solution & cd solution
      C:\Path\to\protobuf\cmake\solution>cmake -G "Visual Studio 12 2013 Win64" ^
