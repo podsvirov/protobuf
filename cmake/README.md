@@ -205,7 +205,7 @@ If all tests are passed, safely continue.
 Installing
 ==========
 
-To install protobuf to the specified *install* folder type:
+To install protobuf to the specified *install* folder:
 
      C:\Path\to\protobuf\cmake\build\release>nmake install
 
@@ -216,10 +216,10 @@ or
 You can also build project *INSTALL* from Visual Studio solution.
 It sounds not so strange and it works.
 
-This will create the following folders:
-  * bin - that contain protobuf *protoc.exe* compiler;
-  * inclue - that contain C++ headers and protobuf *.proto files;
-  * lib - that contain linking libraries and *CMake* configuration for *protobuf* package.
+This will create the following folders under the *install* location:
+  * bin - that contains protobuf *protoc.exe* compiler;
+  * inclue - that contains C++ headers and protobuf *.proto files;
+  * lib - that contains linking libraries and *CMake* configuration files for *protobuf* package.
 
 Now you can if needed:
   * Copy the contents of the include directory to wherever you want to put headers.
