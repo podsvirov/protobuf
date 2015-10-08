@@ -136,7 +136,7 @@ you need to add *cmake* command argument `-Dprotobuf_BUILD_TESTS=OFF` to disable
 Compiling
 =========
 
-To compilling protobuf type:
+To compile protobuf:
 
      C:\Path\to\protobuf\cmake\build\release>nmake
 
@@ -144,7 +144,7 @@ or
 
      C:\Path\to\protobuf\cmake\build\debug>nmake
 
-And wait for compiling to finish.
+And wait for the compilation to finish.
 
 You prefer to use the IDE:
 
@@ -152,7 +152,7 @@ You prefer to use the IDE:
   * Choose "Debug" or "Release" configuration as desired.
   * From the Build menu, choose "Build Solution".
 
-And wait for compiling to finish.
+wait for the compilation to finish.
 
 Testing
 =======
