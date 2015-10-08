@@ -82,7 +82,7 @@ Good. Now you are ready to *CMake* configuration.
 CMake Configuration
 ===================
 
-The *CMake* supports a lot of different
+*CMake* supports a lot of different
 [generators](http://www.cmake.org/cmake/help/latest/manual/cmake-generators.7.html)
 for various native build systems.
 We are only interested in
