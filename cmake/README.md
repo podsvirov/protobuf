@@ -157,7 +157,7 @@ wait for the compilation to finish.
 Testing
 =======
 
-To start unit testing type:
+To run unit-tests:
 
      C:\Path\to\protobuf\cmake\build\release>nmake check
 
@@ -178,7 +178,7 @@ You should see output similar to:
      [==========] 1546 tests from 165 test cases ran. (2529 ms total)
      [  PASSED  ] 1546 tests.
 
-Fore more specific testing start *tests* from source folder:
+To run specific tests:
 
      C:\Path\to\protobuf>cmake\build\release\tests.exe --gtest_filter=AnyTest*
      Running main() from gmock_main.cc
@@ -198,7 +198,7 @@ Fore more specific testing start *tests* from source folder:
      [==========] 3 tests from 1 test case ran. (2 ms total)
      [  PASSED  ] 3 tests.
 
-Note that the start from source folder important for testing.
+Note that the tests must be run from the source folder.
 
 If all tests are passed, safely continue.
 
