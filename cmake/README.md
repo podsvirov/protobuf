@@ -271,7 +271,7 @@ You need prepare it:
   * Make sure zlib's linking libraries (*.lib file) is in your
     `C:\Path\to\install\lib` library path.
 
-You can also quick compile it himself.
+You can also compile it from source by yourself.
 
 Getting sources:
 
@@ -294,6 +294,9 @@ Now add *bin* folder from *install* to system *PATH*:
      C:\Path\to>set PATH=%PATH%;C:\Path\to\install\bin
 
 You need reconfigure protobuf with flag `-Dprotobuf_WITH_ZLIB=ON` when invoking cmake.
+
+Note that if you have compiled ZLIB youself, as stated above,
+further disable the option `-Dprotobuf_MSVC_STATIC_RUNTIME=OFF`.
 
 If it reports NOTFOUND for zlib_include or zlib_lib, you might haven't put
 the headers or the .lib file in the right directory.
