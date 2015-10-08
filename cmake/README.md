@@ -60,7 +60,7 @@ from the *releases* page, the *gmock* directory should already be there. If you 
 the code via `git clone`, this *gmock* directory won't exist and you will have to
 download it manually or skip building protobuf unit-tests.
 
-If even so the *gmock* folder does not exist, you can download it as follows:
+You can download gmock as follows:
 
      C:\Path\to\protobuf>git clone -b release-1.7.0 https://github.com/google/googlemock.git gmock
 
