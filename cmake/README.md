@@ -295,7 +295,7 @@ Now add *bin* folder from *install* to system *PATH*:
 
 You need reconfigure protobuf with flag `-Dprotobuf_WITH_ZLIB=ON` when invoking cmake.
 
-Note that if you have compiled ZLIB youself, as stated above,
+Note that if you have compiled ZLIB yourself, as stated above,
 further disable the option `-Dprotobuf_MSVC_STATIC_RUNTIME=OFF`.
 
 If it reports NOTFOUND for zlib_include or zlib_lib, you might haven't put
